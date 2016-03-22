@@ -98,6 +98,7 @@ class Generator implements NonceGeneratorInterface
         } catch (\Magento\Framework\Oauth\Exception $exception) {
             throw $exception;
         } catch (\Exception $exception) {
+            throw new \Magento\Framework\Oauth\Exception(__($exception->getMessage()));
             throw new \Magento\Framework\Oauth\Exception(__('An error occurred validating the nonce'));
         }
     }

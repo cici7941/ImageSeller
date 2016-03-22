@@ -4,3 +4,4 @@
 [Mon Mar 21 23:29:29.910493 2016] [access_compat:error] [pid 1322] [client 127.0.0.1:57064] AH01797: client denied by server configuration: /var/www/ImageSeller/app/etc/config.php
 [Tue Mar 22 11:29:25.483421 2016] [access_compat:error] [pid 5342] [client 127.0.0.1:58854] AH01797: client denied by server configuration: /var/www/ImageSeller/app/etc/config.php
 [Tue Mar 22 11:45:08.398440 2016] [access_compat:error] [pid 6244] [client 127.0.0.1:59646] AH01797: client denied by server configuration: /var/www/ImageSeller/app/etc/config.php
+[Tue Mar 22 16:42:40.661465 2016] [access_compat:error] [pid 25143] [client 127.0.0.1:50428] AH01797: client denied by server configuration: /var/www/ImageSeller/app/etc/config.php

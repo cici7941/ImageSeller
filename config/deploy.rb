@@ -14,7 +14,7 @@ set :ssh_options, {
 # Default value for :pty is false
 set :pty, true
 
-set :linked_dirs, fetch(:linked_dirs, []).push("var", "pub")
+set :linked_dirs, fetch(:linked_dirs, []).push("var")
 set :linked_files, fetch(:linked_files, []).push("app/etc/env.php")
 
 namespace :deploy do
