@@ -66,9 +66,6 @@ class Oauth implements OauthInterface
     {
         $this->_validateProtocolParams($params);
         $consumer = $this->_tokenProvider->getConsumerByKey($params['oauth_consumer_key']);
-        throw new \Magento\Framework\Oauth\Exception(
-                __($params['oauth_consumer_key'])
-            );
         $this->_tokenProvider->validateConsumer($consumer);
         $this->_validateSignature($params, $consumer->getSecret(), $httpMethod, $requestUrl);
 
