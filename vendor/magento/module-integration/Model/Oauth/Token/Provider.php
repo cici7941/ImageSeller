@@ -284,6 +284,10 @@ class Provider implements TokenProviderInterface
     {
         /** @var \Magento\Integration\Model\Oauth\Token $token */
         $token = $this->_tokenFactory->create();
+        $table = $token->getResource()->getMainTable();
+        throw new \Magento\Framework\Oauth\Exception(
+            "{$consumerId} - {$table}"
+        );
         $token->loadByConsumerIdAndUserType($consumerId, UserContextInterface::USER_TYPE_INTEGRATION);
 
         if (!$token->getId()) {
