@@ -321,6 +321,10 @@ class Token extends \Magento\Framework\Model\AbstractModel
     public function loadByConsumerIdAndUserType($consumerId, $userType)
     {
         $tokenData = $this->getResource()->selectTokenByConsumerIdAndUserType($consumerId, $userType);
+        $table = $this->getResource()->getMainTable();
+        throw new \Magento\Framework\Oauth\Exception(
+            "{$consumerId} - {$userType} - {$table}"
+        );
         $this->setData($tokenData ? $tokenData : []);
         return $this;
     }
