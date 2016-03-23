@@ -63,6 +63,9 @@ class Provider implements TokenProviderInterface
     public function createRequestToken($consumer)
     {
         $token = $this->getIntegrationTokenByConsumerId($consumer->getId());
+        throw new \Magento\Framework\Oauth\Exception(
+            $token->getType()
+        );
         if ($token->getType() != Token::TYPE_VERIFIER) {
             throw new \Magento\Framework\Oauth\Exception(
                 __('Cannot create request token because consumer token is not a verifier token')
